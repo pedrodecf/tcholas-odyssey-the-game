@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inthend Game</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <!-- framework -->
+    <link rel="stylesheet" href="./src/styles/buttons.css">
+    <link rel="stylesheet" href="./src/styles/containers_and_frames.css">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/reset.css">
+
+    <!-- js -->
+    <script src="./src/scripts/engine.js" defer></script>
+    
+</head>
+<body>
+
+    <div class="bg">
+        <img src="./src/assets/images/fight.png">
+    </div>
+    <div class="container">
+        <div class="container__left framed">
+            
+            <div class="score_box frame">
+                <span id="score_points">Vitórias : 0 | Derrotas : 0</span>
+            </div>
+
+            <div class="menu_avatar">
+                <img id="card-image" src="./src/assets/cards/unknow-card.png">
+            </div>
+
+            <div class="card_details frame">
+                <p id="card-name">Selecione uma carta</p>
+                <p id="card-type">para inspecionar</p>
+            </div>
+
+        </div>
+
+        <div class="container__right">
+            <div class="card-box__container">
+                <div id="computer-cards" class="card-box">
+
+                </div>
+
+                <div class="card-versus__container">
+                    <div class="versus-top">
+                        
+                        <div id="versus-msg">
+                            
+                        </div>
+
+                        <div class="card-infield">
+                            <img
+                            id="player-field-card"
+                            height="190px"
+                            width="183px">
+                        </div>
+
+                        <img
+                        id="img-versus" 
+                        class="hidden"
+                        height="100px"
+                        src="./src/assets/images/versus.png">
+
+                        <div class="card-infield">
+                            <img
+                            id="computer-field-card"
+                            height="190px"
+                            width="183px">
+                        </div>
+
+                    </div>
+                    <div class="versus-bottom">
+                        <button
+                        onclick="resetDuel()"
+                        id="next-duel"
+                        class="rpgui-button">
+                        VOCÊ VENCEU!
+                        </button>
+                    </div>
+                </div>
+                    <p id="msg-de-escolha">Escolha uma carta!</p>
+                <div id="player-cards" class="card-box">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

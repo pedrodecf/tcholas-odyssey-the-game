@@ -1,0 +1,199 @@
+body {
+    background-color: #000;
+}
+
+.bg {
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    top: -15%;
+}
+
+.bg::after {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 60%;
+
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    height: 100vh;
+}
+
+.container__left {
+    width: 30%;
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.score_box {
+    background-color: #fff;
+    padding: 30px;
+    width: 90%;
+    text-align: center;
+}
+
+#score_points {
+    font-size: 14px;
+}
+
+.frame {
+    border: 3px solid #000;
+    border-radius: 5px;
+}
+
+.card_details {
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    width: 80%;
+}
+
+#card-name {
+    font-size: 1.2rem;
+}
+
+#card-type {
+    font-size: 0.8rem;
+}
+
+
+.container__right {
+    width: 70%;
+}
+
+.card-box__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem 1rem; 
+}
+
+.card-versus__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 180px;
+}
+
+.versus-top {
+    display: flex;
+    gap: 30px;
+}
+
+#img-versus {
+    position: absolute;
+    z-index: 2;
+}
+.versus-top,
+.versus-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.versus-bottom {
+    position: absolute;
+    bottom: 35%;
+}
+
+#versus-msg {
+    position: absolute;
+    top: 27%;
+    font-size: 3rem;
+    color: #c0912c;
+    text-shadow: 4px 4px 0px #000;    
+}
+
+#next-duel {
+    display: none;
+    color: #000000c2;
+}
+
+#computer-cards.card-box {
+    margin-top: 100px;
+    gap: 20px;
+    opacity: 80%;
+    transform: translate(-7px, 0px);
+}
+
+.card-box {
+    height: 15rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.card {
+    cursor: pointer;
+    user-select: none;
+}
+
+#player-cards .card:hover {
+    transform: scale(1.2);
+}
+
+.card-infield {
+  transform-style: preserve-3d;
+  perspective: 500px;
+}
+
+#msg-de-escolha {
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#player-field-card {
+  animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)
+}
+
+#computer-field-card {
+  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+    display: none;
+}
